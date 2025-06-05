@@ -1,0 +1,258 @@
+[
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/raw_fichaje_de_entrada.mp3.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/raw/fichaje_de_entrada.mp3"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/raw_fichaje_de_salida_correcto.mp3.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/raw/fichaje_de_salida_correcto.mp3"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/xml_backup_rules.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_mas32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_mas32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_beimancpp.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/beimancpp.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_rfag.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/rfag.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/layout_actividad_login.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/layout/actividad_login.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_fichajeetrada32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/fichajeetrada32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_bar_rafael.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/bar_rafael.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_fichajes32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_fichajes32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_icono_usuario.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/icono_usuario.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/xml_data_extraction_rules.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_calendario.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_calendario.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_reload.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/reload.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/raw_no_internet.mp3.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/raw/no_internet.mp3"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_cliente32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/cliente32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_version_2.gif.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/version_2.gif"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_compliance.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/compliance.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_logo.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/logo.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_launcher.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/xml_network_security_config.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_incidencia32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_incidencia32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_home32_2.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_home32_2.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_hacia_delante.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/hacia_delante.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_logo_cliente.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/logo_cliente.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_logo_desarrolladora.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/logo_desarrolladora.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_configuracion32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_configuracion32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_tragabuche.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/tragabuche.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_logo_i3data.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/logo_i3data.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/xml_device_admin_receiver.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/xml/device_admin_receiver.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_solicitudes32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/solicitudes32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_cerrar32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_cerrar32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_fichajesalida32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/fichajesalida32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_sermanten.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/sermanten.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_ic_horario32.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/ic_horario32.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_background_cuadro.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/background_cuadro.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_radius_button.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/radius_button.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/raw_codigo_incorrecto.mp3.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/raw/codigo_incorrecto.mp3"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_berlin.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/berlin.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/layout_activity_main.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/layout_portada.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/layout/portada.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_hacia_atras.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/hacia_atras.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_kairos24h.png.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/kairos24h.png"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/drawable_round_button.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/drawable/round_button.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/layout-land_portada.xml.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/layout-land/portada.xml"
+    },
+    {
+        "merged": "com.miapp.kairos24h.app-debug-74:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.miapp.kairos24h.app-main-76:/mipmap-xxhdpi/ic_launcher_round.webp"
+    }
+]

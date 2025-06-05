@@ -1,0 +1,10 @@
+#Thu Jun 05 13:52:52 CEST 2025
+base.0=/Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+base.1=/Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+base.2=/Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/1/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=1/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

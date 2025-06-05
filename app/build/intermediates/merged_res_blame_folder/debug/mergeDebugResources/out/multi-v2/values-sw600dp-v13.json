@@ -1,0 +1,115 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.miapp.kairos24h.app-mergeDebugResources-72:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/d4dd0c2fc41d49eb70711568ff28c9e4/transformed/appcompat-1.7.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "416,485,554,624,698,774,833,904",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "480,549,619,693,769,828,899,967"
+                    }
+                },
+                {
+                    "source": "/Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/res/values-sw600dp/colors.xml",
+                    "from": {
+                        "startLines": "7,11,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "286,411,55,102,149,196,241,328",
+                        "endColumns": "41,45,46,46,46,44,44,41",
+                        "endOffsets": "323,452,97,144,191,236,281,365"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,97,143,190,237,284,329,374",
+                        "endColumns": "41,45,46,46,46,44,44,41",
+                        "endOffsets": "92,138,185,232,279,324,369,411"
+                    }
+                },
+                {
+                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,553,617,673,732,795",
+                        "endLines": "2,3,4,5,6,7,9,10,11,12,13,17",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "110,180,251,323,381,439,548,612,668,727,790,962"
+                    },
+                    "to": {
+                        "startLines": "22,23,24,25,26,27,28,30,36,37,38,64",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1179,1239,1309,1380,1452,1510,1568,1677,2030,2086,2145,3999",
+                        "endLines": "22,23,24,25,26,27,29,30,36,37,38,67",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "1234,1304,1375,1447,1505,1563,1672,1736,2081,2140,2203,4166"
+                    }
+                },
+                {
+                    "source": "/Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/res/values-sw600dp/themes.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "109",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "452"
+                    },
+                    "to": {
+                        "startLines": "58",
+                        "startColumns": "4",
+                        "startOffsets": "3651",
+                        "endLines": "63",
+                        "endColumns": "12",
+                        "endOffsets": "3994"
+                    }
+                },
+                {
+                    "source": "/Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/res/values-sw600dp/strings.xml",
+                    "from": {
+                        "startLines": "1,19,10,11,12,13,14,15,16,17,18,22,23,24,25,26,3,2,7",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "16,700,376,412,448,484,520,556,592,628,664,764,811,859,905,997,151,79,279",
+                        "endColumns": "62,35,35,35,35,35,35,35,35,35,35,46,47,45,91,561,87,71,64",
+                        "endOffsets": "74,731,407,443,479,515,551,587,623,659,695,806,854,900,992,1554,234,146,339"
+                    },
+                    "to": {
+                        "startLines": "39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2208,2271,2307,2343,2379,2415,2451,2487,2523,2559,2595,2631,2678,2726,2772,2864,3426,3514,3586",
+                        "endColumns": "62,35,35,35,35,35,35,35,35,35,35,46,47,45,91,561,87,71,64",
+                        "endOffsets": "2266,2302,2338,2374,2410,2446,2482,2518,2554,2590,2626,2673,2721,2767,2859,3421,3509,3581,3646"
+                    }
+                },
+                {
+                    "source": "/Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/res/values-sw600dp/dimens.xml",
+                    "from": {
+                        "startLines": "4,3,1,2,8,6,7,9,5",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "177,118,16,61,411,281,341,459,223",
+                        "endColumns": "45,58,44,56,47,59,69,52,57",
+                        "endOffsets": "218,172,56,113,454,336,406,507,276"
+                    },
+                    "to": {
+                        "startLines": "18,19,20,21,31,32,33,34,35",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "972,1018,1077,1122,1741,1789,1849,1919,1972",
+                        "endColumns": "45,58,44,56,47,59,69,52,57",
+                        "endOffsets": "1013,1072,1117,1174,1784,1844,1914,1967,2025"
+                    }
+                }
+            ]
+        }
+    ]
+}

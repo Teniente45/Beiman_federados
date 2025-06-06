@@ -24,7 +24,7 @@
 
         <!-- MainActivity con opciones combinadas -->
         <activity
-            android:name="com.miapp.kairos24h.MainActivity"
+            android:name="com.miapp.kairos24h.PaginaPrincipal"
             android:exported="true"
             android:theme="@style/Theme.Kairos24h"
             android:screenOrientation="fullSensor"
@@ -42,7 +42,7 @@
 
         <!-- Actividad Fichar -->
         <activity
-            android:name="com.miapp.kairos24h.movilAPK.Fichar"
+            android:name="com.miapp.kairos24h.movilAPK.PaginaSecundaria"
             android:exported="true"
             android:theme="@style/Theme.Kairos24h"
             android:screenOrientation="portrait"

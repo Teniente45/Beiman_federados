@@ -58,9 +58,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.NavHost
@@ -68,14 +66,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.miapp.kairos24h.enlaces_internos.BuildURLmovil
 import com.miapp.kairos24h.enlaces_internos.ImagenesMovil
+import com.miapp.kairos24h.movilAPK.PaginaSecundaria
 import com.miapp.kairos24h.sesionesYSeguridad.AuthManager
-import com.miapp.kairos24h.movilAPK.Fichar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
-class MainActivity : ComponentActivity() {
+class PaginaPrincipal : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,17 +84,8 @@ class MainActivity : ComponentActivity() {
         android.util.Log.d("SesionDebug", "storedUser='$storedUser' storedPassword='$storedPassword'")
 
         if (storedUser.isNotBlank() && storedPassword.isNotBlank()) {
-            // Si existen credenciales, redirigimos según cTipEmp guardado en las credenciales
-            val cTipEmp = AuthManager.getUserCredentials(this).cTipEmp.uppercase()
-            android.util.Log.d("Redireccion", "Valor de cTipEmp: $cTipEmp")
-            if (cTipEmp == "TABLET") {
-                android.util.Log.d("Redireccion", "Iniciando MainActivity (modo TABLET)")
-                val intent = Intent(this@MainActivity, com.miapp.kairos24h.tabletAPK.MainActivityTablet::class.java)
-                startActivity(intent)
-            } else {
-                android.util.Log.d("Redireccion", "Iniciando Fichar (modo APK)")
-                navigateToFichar(storedUser, storedPassword)
-            }
+            android.util.Log.d("Redireccion", "Iniciando Fichar con sesión activa")
+            navigateToFichar(storedUser, storedPassword)
         } else {
             android.util.Log.d("SesionDebug", "Credenciales vacías: se mostrará la pantalla de login")
             // Mostrar pantalla de inicio de sesión
@@ -107,9 +96,9 @@ class MainActivity : ComponentActivity() {
                         composable("login") {
                             DisplayLogo(
                                 onSubmit = { usuario: String, password: String ->
-                                    if (!isInternetAvailable(this@MainActivity)) {
+                                    if (!isInternetAvailable(this@PaginaPrincipal)) {
                                         Toast.makeText(
-                                            this@MainActivity,
+                                            this@PaginaPrincipal,
                                             "Compruebe su conexión a Internet",
                                             Toast.LENGTH_LONG
                                         ).show()
@@ -126,7 +115,7 @@ class MainActivity : ComponentActivity() {
                                                 runOnUiThread {
                                                     if (success && xEmpleado != null) {
                                                         AuthManager.saveUserCredentials(
-                                                            this@MainActivity,
+                                                            this@PaginaPrincipal,
                                                             xEmpleado.usuario,
                                                             xEmpleado.password,
                                                             xEmpleado.xEmpleado,
@@ -139,19 +128,9 @@ class MainActivity : ComponentActivity() {
                                                             xEmpleado.tLogo,
                                                             xEmpleado.cTipEmp
                                                         )
-                                                        val cTipEmp = xEmpleado.cTipEmp.uppercase()
-                                                        android.util.Log.d("Redireccion", "Valor de cTipEmp: $cTipEmp")
-                                                        if (cTipEmp == "TABLET") {
-                                                            android.util.Log.d("Redireccion", "Iniciando MainActivity (modo TABLET)")
-                                                            val intent = Intent(this@MainActivity, com.miapp.kairos24h.tabletAPK.MainActivityTablet::class.java)
-                                                            startActivity(intent)
-                                                        } else {
-                                                            android.util.Log.d("Redireccion", "Iniciando Fichar (modo APK)")
-                                                            navigateToFichar(xEmpleado.usuario, xEmpleado.password)
-                                                        }
                                                     } else {
                                                         Toast.makeText(
-                                                            this@MainActivity,
+                                                            this@PaginaPrincipal,
                                                             "Usuario o contraseña incorrectos",
                                                             Toast.LENGTH_SHORT
                                                         ).show()
@@ -160,7 +139,7 @@ class MainActivity : ComponentActivity() {
                                             } catch (e: Exception) {
                                                 runOnUiThread {
                                                     Toast.makeText(
-                                                        this@MainActivity,
+                                                        this@PaginaPrincipal,
                                                         "Error de autenticación: ${e.message}",
                                                         Toast.LENGTH_SHORT
                                                     ).show()
@@ -169,14 +148,14 @@ class MainActivity : ComponentActivity() {
                                         }
                                     } else {
                                         Toast.makeText(
-                                            this@MainActivity,
+                                            this@PaginaPrincipal,
                                             "Por favor, completa ambos campos",
                                             Toast.LENGTH_SHORT
                                         ).show()
                                     }
                                 },
                                 onForgotPassword = {
-                                    val url = BuildURLmovil.getForgotPassword(this@MainActivity)
+                                    val url = BuildURLmovil.getForgotPassword(this@PaginaPrincipal)
                                     val intent = Intent(Intent.ACTION_VIEW, url.toUri())
                                     startActivity(intent)
                                 }
@@ -190,7 +169,7 @@ class MainActivity : ComponentActivity() {
 
     // Inicia la actividad Fichar pasando usuario y contraseña como extras
     private fun navigateToFichar(usuario: String, password: String) {
-        val intent = Intent(this, Fichar::class.java)
+        val intent = Intent(this, PaginaSecundaria::class.java)
         intent.putExtra("usuario", usuario)
         intent.putExtra("password", password)
         startActivity(intent)
@@ -198,16 +177,6 @@ class MainActivity : ComponentActivity() {
     }
 
 
-    // Borra credenciales almacenadas para forzar nuevo login
-    private fun clearCredentials() {
-        // Borra completamente los datos de la sesión del usuario
-        val userPrefs = getSharedPreferences("UserSession", MODE_PRIVATE)
-        userPrefs.edit().clear().apply()
-
-        // Borra completamente las preferencias generales de la app
-        val appPrefs = getSharedPreferences("AppPreferences", MODE_PRIVATE)
-        appPrefs.edit().clear().apply()
-    }
     // Verifica si el dispositivo tiene conexión a Internet activa, ya sea por WiFi o datos móviles.
     private fun isInternetAvailable(context: Context): Boolean {
         val connectivityManager =
@@ -418,12 +387,5 @@ fun DisplayLogo(
     }
 }
 
-// Vista previa para Android Studio
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MaterialTheme {
-        DisplayLogo(onSubmit = { _: String, _: String -> }, onForgotPassword = {})
-    }
-}
+
 

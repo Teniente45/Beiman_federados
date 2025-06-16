@@ -1,0 +1,12 @@
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/sesionesYSeguridad/SeguridadUtils.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/movilAPK/PantallaFuncional.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/ui/theme/Theme.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/paginaLogin.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/ui/theme/Color.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/sesionesYSeguridad/ManejoDeSesion.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/movilAPK/PagSecundaria.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/enlaces_internos/URLs.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/ui/theme/Type.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/enlaces_internos/EstilosBeiman.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/sesionesYSeguridad/AuthManager.kt
+/Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/java/com/miapp/kairos24h/Console/LOGS.kt

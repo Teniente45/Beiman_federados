@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:2:1-81:12
-INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:2:1-81:12
-INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:2:1-81:12
-INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:2:1-81:12
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:2:1-52:12
 MERGED from [com.google.android.material:material:1.11.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/bfba9870875e4fc9cb6a4a6902b13992/transformed/constraintlayout-2.2.1/AndroidManifest.xml:2:1-9:12
 MERGED from [io.coil-kt:coil-compose:2.2.2] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/993279f995a00ecee9e803df4fce1925/transformed/coil-compose-2.2.2/AndroidManifest.xml:2:1-9:12
@@ -101,38 +101,38 @@ MERGED from [androidx.print:print:1.0.0] /Users/juanlopezmarin/.gradle/caches/8.
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/904d6d468e984813c76a1150807505a2/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.volley:volley:1.2.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/1000cc1c7280aaad884d13ea18f776d5/transformed/volley-1.2.1/AndroidManifest.xml:2:1-7:12
 	package
-		INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:3:5-51
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:6:5-79
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:6:22-76
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:7:5-67
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:7:22-64
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:8:5-79
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:8:22-76
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:9:5-81
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:9:22-78
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:9:22-78
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:10:5-81
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:10:22-78
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:10:22-78
 application
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:12:5-80:19
-INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:12:5-80:19
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:12:5-51:19
+INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:12:5-51:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/bfba9870875e4fc9cb6a4a6902b13992/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
@@ -166,125 +166,79 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/juanlopezm
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/ed0d7a310b525878b85e4d5f154f20de/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/ed0d7a310b525878b85e4d5f154f20de/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:17:9-41
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:17:9-41
 	android:fullBackupContent
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:15:9-54
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:15:9-54
 	android:roundIcon
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:18:9-54
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:18:9-54
 	tools:targetApi
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:23:9-29
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:23:9-29
 	android:icon
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:16:9-43
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:20:9-47
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:20:9-47
 	android:networkSecurityConfig
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:22:9-69
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:22:9-69
 	android:dataExtractionRules
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:14:9-65
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:14:9-65
 	android:usesCleartextTraffic
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:21:9-44
-activity#com.miapp.kairos24h.MainActivity
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:26:9-41:20
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:21:9-44
+activity#com.miapp.kairos24h.PaginaPrincipal
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:26:9-41:20
 	android:screenOrientation
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:30:13-51
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:30:13-51
 	android:lockTaskMode
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:32:13-50
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:32:13-50
 	android:excludeFromRecents
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:33:13-46
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:33:13-46
 	android:showWhenLocked
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:34:13-42
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:34:13-42
 	android:exported
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:28:13-36
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:28:13-36
 	tools:ignore
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:36:13-101
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:36:13-101
 	android:immersive
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:31:13-37
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:31:13-37
 	android:theme
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:29:13-51
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:29:13-51
 	android:taskAffinity
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:35:13-36
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:35:13-36
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:27:13-60
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:27:13-63
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:37:13-40:29
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:37:13-40:29
 action#android.intent.action.MAIN
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:38:17-69
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:38:25-66
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:39:17-77
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:39:17-77
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:39:27-74
-activity#com.miapp.kairos24h.movilAPK.Fichar
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:44:9-49:89
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:39:27-74
+activity#com.miapp.kairos24h.movilAPK.PaginaSecundaria
+ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:44:9-49:89
 	android:screenOrientation
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:48:13-49
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:48:13-49
 	android:exported
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:46:13-36
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:46:13-36
 	tools:ignore
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:49:13-86
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:49:13-86
 	android:theme
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:47:13-51
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:47:13-51
 	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:45:13-63
-activity#com.miapp.kairos24h.tabletAPK.MainActivityTablet
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:51:9-56:71
-	android:screenOrientation
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:55:13-51
-	android:exported
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:53:13-36
-	tools:ignore
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:56:13-68
-	android:theme
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:54:13-64
-	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:52:13-76
-receiver#com.miapp.kairos24h.deviceOwner.BootBroadcastReceiver
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:59:9-66:20
-	android:enabled
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:61:13-35
-	android:exported
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:62:13-36
-	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:60:13-81
-intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:63:13-65:29
-action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:64:17-79
-	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:64:25-76
-receiver#com.miapp.kairos24h.deviceOwner.MyDeviceAdminReceiver
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:68:9-78:20
-	android:exported
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:71:13-36
-	android:permission
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:70:13-70
-	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:69:13-81
-meta-data#android.app.device_admin
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:72:13-74:65
-	android:resource
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:74:17-62
-	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:73:17-56
-intent-filter#action:name:android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:75:13-77:29
-action#android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:76:17-82
-	android:name
-		ADDED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml:76:25-79
+		ADDED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml:45:13-73
 uses-sdk
-INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
-INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
+INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
+INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.11.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.11.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/bfba9870875e4fc9cb6a4a6902b13992/transformed/constraintlayout-2.2.1/AndroidManifest.xml:5:5-44
@@ -478,9 +432,9 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/juanlopezmarin/.gradl
 MERGED from [com.android.volley:volley:1.2.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/1000cc1c7280aaad884d13ea18f776d5/transformed/volley-1.2.1/AndroidManifest.xml:5:5-43
 MERGED from [com.android.volley:volley:1.2.1] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/1000cc1c7280aaad884d13ea18f776d5/transformed/volley-1.2.1/AndroidManifest.xml:5:5-43
 	android:targetSdkVersion
-		INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/juanlopezmarin/StudioProjects/iDEMO_Control_Horario_Kairos24hWebView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/juanlopezmarin/AndroidStudioProjects/Beiman_federados/app/src/main/AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/4ef6ffa9e519aa94a5c358e2f6bbb429/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
 	android:exported
@@ -537,7 +491,7 @@ ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10
 		ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
-permission#com.miapp.kairos24h.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.miapp.beiman_federados.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
@@ -547,7 +501,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
-uses-permission#com.miapp.kairos24h.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.miapp.beiman_federados.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.15.0] /Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/72392dcd80116963cd4b0947db556ab6/transformed/core-1.15.0/AndroidManifest.xml:26:22-94

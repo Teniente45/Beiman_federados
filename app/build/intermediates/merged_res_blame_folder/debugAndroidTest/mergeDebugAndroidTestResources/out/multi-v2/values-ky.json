@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.miapp.kairos24h.test.app-mergeDebugAndroidTestResources-35:/values-ky/values-ky.xml",
+            "outputFile": "com.miapp.beiman_federados.test.app-mergeDebugAndroidTestResources-35:/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/4197084e863cfb29c029f5591c32886b/transformed/ui-release/res/values-ky/values-ky.xml",

@@ -1,4 +1,4 @@
-com.miapp.kairos24h.test
+com.miapp.beiman_federados.test
 attr alpha
 attr font
 attr fontProviderAuthority

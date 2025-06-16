@@ -37,7 +37,9 @@ import com.miapp.kairos24h.enlaces_internos.ImagenesMovil
 import android.webkit.WebView
 import androidx.compose.foundation.clickable
 import android.content.Context
+import com.miapp.beiman_federados.R
 import com.miapp.kairos24h.enlaces_internos.BuildURLmovil
+import com.miapp.kairos24h.enlaces_internos.EstilosBeiman
 
 
 //============================== CUADRO PARA FICHAR ======================================
@@ -118,59 +120,97 @@ fun Logo_empresa_desarrolladora() {
 
 @Composable
 fun NavegadorBeiman(webView: WebView, context: Context) {
-    Column(
+    Row(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+        horizontalArrangement = Arrangement.SpaceEvenly
     ) {
-        Row {
-            Text(
-                text = "Ver Cita",
+        Column(
+            verticalArrangement = Arrangement.spacedBy(32.dp)
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.clickable {
                     webView.loadUrl(BuildURLmovil.verCita(context))
                 }
-            )
-        }
-        Row {
-            Text(
-                text = "Ver informe",
-                modifier = Modifier.clickable {
-                    webView.loadUrl(BuildURLmovil.verInforme(context))
-                }
-            )
-        }
-        Row {
-            Text(
-                text = "Ver protocolos y póliza de seguros",
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.mis_citas),
+                    contentDescription = "Icono Mis Citas",
+                    modifier = EstilosBeiman.iconoSize
+                )
+                Text(text = "Mis Citas", style = EstilosBeiman.textoEstilo)
+            }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.clickable {
                     webView.loadUrl(BuildURLmovil.verProtocoloYSeguridad(context))
                 }
-            )
-        }
-        Row {
-            Text(
-                text = "Pedir alta voluntaria",
-                modifier = Modifier.clickable {
-                    webView.loadUrl(BuildURLmovil.pedirAltaVoluntaria(context))
-                }
-            )
-        }
-        Row {
-            Text(
-                text = "Subida de documento",
-                modifier = Modifier.clickable {
-                    webView.loadUrl(BuildURLmovil.subirDocumento(context))
-                }
-            )
-        }
-        Row {
-            Text(
-                text = "Comunicar un parte",
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.poliza_de_seguros),
+                    contentDescription = "Icono Póliza de seguros",
+                    modifier = EstilosBeiman.iconoSize
+                )
+                Text(text = "Póliza de seguros", style = EstilosBeiman.textoEstilo)
+            }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.clickable {
                     webView.loadUrl(BuildURLmovil.comunicarParte(context))
                 }
-            )
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.comunicar_un_parte),
+                    contentDescription = "Icono Comunicar un parte",
+                    modifier = EstilosBeiman.iconoSize
+                )
+                Text(text = "Comunicar un parte", style = EstilosBeiman.textoEstilo)
+            }
+        }
+        Column(
+            verticalArrangement = Arrangement.spacedBy(32.dp)
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.clickable {
+                    webView.loadUrl(BuildURLmovil.verInforme(context))
+                }
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.mis_informes),
+                    contentDescription = "Icono Mis informes",
+                    modifier = EstilosBeiman.iconoSize
+                )
+                Text(text = "Mis informes", style = EstilosBeiman.textoEstilo)
+            }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.clickable {
+                    webView.loadUrl(BuildURLmovil.pedirAltaVoluntaria(context))
+                }
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.tramitar_alta_voluntaria),
+                    contentDescription = "Icono Tramitar alta voluntaria",
+                    modifier = EstilosBeiman.iconoSize
+                )
+                Text(text = "Tramitar alta voluntaria", style = EstilosBeiman.textoEstilo)
+            }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.clickable {
+                    webView.loadUrl(BuildURLmovil.subirDocumento(context))
+                }
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.subir_documento),
+                    contentDescription = "Icono Subir un documento",
+                    modifier = EstilosBeiman.iconoSize
+                )
+                Text(text = "Subir un documento", style = EstilosBeiman.textoEstilo)
+            }
         }
     }
 }

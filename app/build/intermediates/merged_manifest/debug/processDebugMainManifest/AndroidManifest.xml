@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.miapp.kairos24h"
+    package="com.miapp.beiman_federados"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -16,10 +16,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <permission
-        android:name="com.miapp.kairos24h.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.miapp.beiman_federados.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.miapp.kairos24h.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.miapp.beiman_federados.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -38,7 +38,7 @@
 
         <!-- MainActivity con opciones combinadas -->
         <activity
-            android:name="com.miapp.kairos24h.MainActivity"
+            android:name="com.miapp.kairos24h.PaginaPrincipal"
             android:excludeFromRecents="true"
             android:exported="true"
             android:immersive="true"
@@ -56,37 +56,10 @@
 
         <!-- Actividad Fichar -->
         <activity
-            android:name="com.miapp.kairos24h.movilAPK.Fichar"
+            android:name="com.miapp.kairos24h.movilAPK.PaginaSecundaria"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Kairos24h" />
-        <activity
-            android:name="com.miapp.kairos24h.tabletAPK.MainActivityTablet"
-            android:exported="true"
-            android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.RelojFichajesKairos24h" />
-
-        <receiver
-            android:name="com.miapp.kairos24h.deviceOwner.BootBroadcastReceiver"
-            android:enabled="true"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="com.miapp.kairos24h.deviceOwner.MyDeviceAdminReceiver"
-            android:exported="true"
-            android:permission="android.permission.BIND_DEVICE_ADMIN" >
-            <meta-data
-                android:name="android.app.device_admin"
-                android:resource="@xml/device_admin_receiver" />
-
-            <intent-filter>
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-            </intent-filter>
-        </receiver>
-
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
@@ -106,7 +79,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.miapp.kairos24h.androidx-startup"
+            android:authorities="com.miapp.beiman_federados.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

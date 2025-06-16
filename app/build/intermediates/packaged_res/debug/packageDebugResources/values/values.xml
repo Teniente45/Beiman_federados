@@ -9,7 +9,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">Control Horario Kairos24h</string>
+    <string name="app_name">Beiman Federados</string>
     <style name="CustomEditTextStyle" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
         <item name="android:textColor">@android:color/black</item> 
         <item name="android:cursorVisible">true</item> 

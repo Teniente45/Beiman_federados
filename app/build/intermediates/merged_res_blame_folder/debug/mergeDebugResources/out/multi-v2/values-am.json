@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.miapp.kairos24h.app-mergeDebugResources-72:/values-am/values-am.xml",
+            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-72:/values-am/values-am.xml",
             "map": [
                 {
                     "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/d4dd0c2fc41d49eb70711568ff28c9e4/transformed/appcompat-1.7.0/res/values-am/values-am.xml",

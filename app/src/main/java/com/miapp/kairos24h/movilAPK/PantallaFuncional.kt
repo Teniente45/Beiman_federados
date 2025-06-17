@@ -8,6 +8,7 @@
 
 package com.miapp.kairos24h.movilAPK
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,7 +17,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Text
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.MutableState
@@ -46,6 +50,15 @@ import com.miapp.kairos24h.enlaces_internos.BuildURLmovil
 import com.miapp.kairos24h.enlaces_internos.EstilosBeiman
 import android.os.Handler
 import android.os.Looper
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.unit.sp
 
 
 //============================== CUADRO PARA FICHAR ======================================
@@ -71,15 +84,23 @@ fun SolapaWebView(
     }
     // Cambiar que se accione por comportamiento de botón
     if (isVisibleState.value) {
-        Box(
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color.White)
-                .zIndex(2f)
+                .zIndex(2f),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
-            Logo_empresa_cliente()
-            Logo_empresa_desarrolladora()
-            NavegadorBeiman(isVisibleState, webView, androidx.compose.ui.platform.LocalContext.current)
+            Box(modifier = Modifier.padding(vertical = dynamicVerticalPadding())) {
+                Logo_empresa_cliente()
+            }
+            Box(modifier = Modifier.padding(vertical = dynamicVerticalPadding())) {
+                NavegadorBeiman(isVisibleState, webView, LocalContext.current)
+            }
+            Box(modifier = Modifier.padding(vertical = dynamicVerticalPadding())) {
+                Logo_empresa_desarrolladora()
+            }
         }
     }
 }
@@ -109,180 +130,131 @@ fun Logo_empresa_desarrolladora() {
 }
 
 @Composable
+fun NavegadorIcono(label: String, iconRes: Int, onClick: () -> Unit) {
+    var scale by remember { mutableFloatStateOf(1f) }
+    val animatedScale by animateFloatAsState(
+        targetValue = scale,
+        animationSpec = tween(durationMillis = 600),
+        label = ""
+    )
+
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .graphicsLayer(scaleX = animatedScale, scaleY = animatedScale)
+            .clickable {
+                scale = 1.2f
+                onClick()
+                Handler(Looper.getMainLooper()).postDelayed({
+                    scale = 1f
+                }, 1000)
+            }
+            .padding(bottom = 6.dp) // padding inferior general mínimo entre bloques
+    ) {
+        Image(
+            painter = painterResource(id = iconRes),
+            contentDescription = label,
+            modifier = Modifier.size(96.dp)
+        )
+        Spacer(modifier = Modifier.height(10.dp)) // separación entre imagen y texto
+        Text(
+            text = label,
+            style = EstilosBeiman.textoEstilo.copy(fontSize = 22.sp),
+            textAlign = TextAlign.Center,
+            maxLines = Int.MAX_VALUE,
+            softWrap = true
+        )
+    }
+}
+
+@Composable
 fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, context: Context) {
     Row(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(EstilosBeiman.paddingGeneral),
-        horizontalArrangement = Arrangement.SpaceEvenly
+            .fillMaxWidth()
+            .padding(horizontal = 6.dp, vertical = 4.dp)
+            .background(Color.Transparent),
+        horizontalArrangement = Arrangement.spacedBy(30.dp, Alignment.CenterHorizontally),
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Column(
-            verticalArrangement = Arrangement.spacedBy(EstilosBeiman.espaciadoEntreBotones)
+            verticalArrangement = Arrangement.spacedBy(30.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            var scaleMisCitas by remember { mutableFloatStateOf(1f) }
-            val animatedScaleMisCitas by animateFloatAsState(
-                targetValue = scaleMisCitas,
-                animationSpec = tween(durationMillis = 600),
-                label = ""
+            NavegadorIcono(
+                label = "Mis Citas",
+                iconRes = R.drawable.mis_citas,
+                onClick = {
+                    webView.loadUrl(BuildURLmovil.verCita(context))
+                    isVisibleState.value = false
+                }
             )
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .graphicsLayer(scaleX = animatedScaleMisCitas, scaleY = animatedScaleMisCitas)
-                    .clickable {
-                        scaleMisCitas = 1.2f
-                        webView.loadUrl(BuildURLmovil.verCita(context))
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            isVisibleState.value = false
-                            scaleMisCitas = 1f
-                        }, 1000)
-                    }
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.mis_citas),
-                    contentDescription = "Icono Mis Citas",
-                    modifier = EstilosBeiman.iconoSize
-                )
-                Text(text = "Mis Citas", style = EstilosBeiman.textoEstilo)
-            }
-
-            var scalePoliza by remember { mutableFloatStateOf(1f) }
-            val animatedScalePoliza by animateFloatAsState(
-                targetValue = scalePoliza,
-                animationSpec = tween(durationMillis = 600),
-                label = ""
+            NavegadorIcono(
+                label = "Póliza de seguros",
+                iconRes = R.drawable.poliza_de_seguros,
+                onClick = {
+                    webView.loadUrl(BuildURLmovil.verProtocoloYSeguridad(context))
+                    isVisibleState.value = false
+                }
             )
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .graphicsLayer(scaleX = animatedScalePoliza, scaleY = animatedScalePoliza)
-                    .clickable {
-                        scalePoliza = 1.2f
-                        webView.loadUrl(BuildURLmovil.verProtocoloYSeguridad(context))
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            isVisibleState.value = false
-                            scalePoliza = 1f
-                        }, 1000)
-                    }
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.poliza_de_seguros),
-                    contentDescription = "Icono Póliza de seguros",
-                    modifier = EstilosBeiman.iconoSize
-                )
-                Text(text = "Póliza de seguros", style = EstilosBeiman.textoEstilo)
-            }
-
-            var scaleComunicarParte by remember { mutableFloatStateOf(1f) }
-            val animatedScaleComunicarParte by animateFloatAsState(
-                targetValue = scaleComunicarParte,
-                animationSpec = tween(durationMillis = 600),
-                label = ""
+            NavegadorIcono(
+                label = "Comunicar un parte",
+                iconRes = R.drawable.comunicar_un_parte,
+                onClick = {
+                    webView.loadUrl(BuildURLmovil.comunicarParte(context))
+                    isVisibleState.value = false
+                }
             )
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .graphicsLayer(scaleX = animatedScaleComunicarParte, scaleY = animatedScaleComunicarParte)
-                    .clickable {
-                        scaleComunicarParte = 1.2f
-                        webView.loadUrl(BuildURLmovil.comunicarParte(context))
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            isVisibleState.value = false
-                            scaleComunicarParte = 1f
-                        }, 1000)
-                    }
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.comunicar_un_parte),
-                    contentDescription = "Icono Comunicar un parte",
-                    modifier = EstilosBeiman.iconoSize
-                )
-                Text(text = "Comunicar un parte", style = EstilosBeiman.textoEstilo)
-            }
         }
         Column(
-            verticalArrangement = Arrangement.spacedBy(EstilosBeiman.espaciadoEntreBotones)
+            verticalArrangement = Arrangement.spacedBy(30.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            var scaleMisInformes by remember { mutableFloatStateOf(1f) }
-            val animatedScaleMisInformes by animateFloatAsState(
-                targetValue = scaleMisInformes,
-                animationSpec = tween(durationMillis = 600),
-                label = ""
+            NavegadorIcono(
+                label = "Mis informes",
+                iconRes = R.drawable.mis_informes,
+                onClick = {
+                    webView.loadUrl(BuildURLmovil.verInforme(context))
+                    isVisibleState.value = false
+                }
             )
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .graphicsLayer(scaleX = animatedScaleMisInformes, scaleY = animatedScaleMisInformes)
-                    .clickable {
-                        scaleMisInformes = 1.2f
-                        webView.loadUrl(BuildURLmovil.verInforme(context))
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            isVisibleState.value = false
-                            scaleMisInformes = 1f
-                        }, 1000)
-                    }
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.mis_informes),
-                    contentDescription = "Icono Mis informes",
-                    modifier = EstilosBeiman.iconoSize
-                )
-                Text(text = "Mis informes", style = EstilosBeiman.textoEstilo)
-            }
-
-            var scaleAltaVoluntaria by remember { mutableFloatStateOf(1f) }
-            val animatedScaleAltaVoluntaria by animateFloatAsState(
-                targetValue = scaleAltaVoluntaria,
-                animationSpec = tween(durationMillis = 600),
-                label = ""
+            NavegadorIcono(
+                label = "Tramitar alta voluntaria",
+                iconRes = R.drawable.tramitar_alta_voluntaria,
+                onClick = {
+                    webView.loadUrl(BuildURLmovil.pedirAltaVoluntaria(context))
+                    isVisibleState.value = false
+                }
             )
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .graphicsLayer(scaleX = animatedScaleAltaVoluntaria, scaleY = animatedScaleAltaVoluntaria)
-                    .clickable {
-                        scaleAltaVoluntaria = 1.2f
-                        webView.loadUrl(BuildURLmovil.pedirAltaVoluntaria(context))
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            isVisibleState.value = false
-                            scaleAltaVoluntaria = 1f
-                        }, 1000)
-                    }
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.tramitar_alta_voluntaria),
-                    contentDescription = "Icono Tramitar alta voluntaria",
-                    modifier = EstilosBeiman.iconoSize
-                )
-                Text(text = "Tramitar alta voluntaria", style = EstilosBeiman.textoEstilo)
-            }
-
-            var scaleSubirDocumento by remember { mutableFloatStateOf(1f) }
-            val animatedScaleSubirDocumento by animateFloatAsState(
-                targetValue = scaleSubirDocumento,
-                animationSpec = tween(durationMillis = 600),
-                label = ""
+            NavegadorIcono(
+                label = "Subir un documento",
+                iconRes = R.drawable.subir_documento,
+                onClick = {
+                    webView.loadUrl(BuildURLmovil.subirDocumento(context))
+                    isVisibleState.value = false
+                }
             )
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .graphicsLayer(scaleX = animatedScaleSubirDocumento, scaleY = animatedScaleSubirDocumento)
-                    .clickable {
-                        scaleSubirDocumento = 1.2f
-                        webView.loadUrl(BuildURLmovil.subirDocumento(context))
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            isVisibleState.value = false
-                            scaleSubirDocumento = 1f
-                        }, 1000)
-                    }
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.subir_documento),
-                    contentDescription = "Icono Subir un documento",
-                    modifier = EstilosBeiman.iconoSize
-                )
-                Text(text = "Subir un documento", style = EstilosBeiman.textoEstilo)
-            }
         }
     }
+}
+
+@Composable
+fun dynamicVerticalPadding(): Dp {
+    val context = LocalContext.current
+    val density = LocalDensity.current
+    val screenHeightPx = context.resources.displayMetrics.heightPixels
+    val screenHeightDp = with(density) { screenHeightPx.toDp() }
+    return maxOf(screenHeightDp * 0.05f, 6.dp)
+}
+
+// Previsualización en tiempo real de SolapaWebView
+@SuppressLint("UnrememberedMutableState")
+@Preview(showBackground = true)
+@Composable
+fun PreviewSolapaWebView() {
+    val context = LocalContext.current
+    SolapaWebView(
+        isVisibleState = mutableStateOf(true),
+        webView = WebView(context)
+    )
 }

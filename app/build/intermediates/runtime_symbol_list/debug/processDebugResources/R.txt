@@ -3115,6 +3115,7 @@ int drawable material_ic_keyboard_arrow_previous_black_24dp 0x7f0700ca
 int drawable material_ic_keyboard_arrow_right_black_24dp 0x7f0700cb
 int drawable material_ic_menu_arrow_down_black_24dp 0x7f0700cc
 int drawable material_ic_menu_arrow_up_black_24dp 0x7f0700cd
+int drawable menu_opciones 0x7f07010a
 int drawable mis_citas 0x7f0700ce
 int drawable mis_informes 0x7f0700cf
 int drawable mtrl_bottomsheet_drag_handle 0x7f0700d0

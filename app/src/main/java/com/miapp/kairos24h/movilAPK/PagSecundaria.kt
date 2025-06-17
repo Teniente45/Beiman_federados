@@ -30,7 +30,6 @@ import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import com.miapp.kairos24h.movilAPK.SolapaWebView
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -55,6 +54,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -272,8 +272,8 @@ fun WebViewScreen(
 ) {
     // Controla si debe mostrarse la pantalla de carga
     var isLoading by remember { mutableStateOf(true) }
-    // Controla la visibilidad del recuadro que solapa al webview
-    val showSolapaWebViewState = remember { mutableStateOf(true) }
+    // Siempre visible al iniciar PagSecundaria, hasta que el usuario lo cierre manualmente
+    val showSolapaWebViewState = rememberSaveable { mutableStateOf(true) }
     // Ámbito de corrutina usado para manejar delays y tareas asincrónicas
     // Controla la visibilidad del diálogo de confirmación para cerrar sesión
     val showLogoutDialog = remember { mutableStateOf(false) }

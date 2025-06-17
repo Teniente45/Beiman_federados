@@ -21,6 +21,7 @@ drawable icono_usuario
 drawable logo
 drawable logo_desarrolladora
 drawable logo_i3data
+drawable menu_opciones
 drawable mis_citas
 drawable mis_informes
 drawable poliza_de_seguros

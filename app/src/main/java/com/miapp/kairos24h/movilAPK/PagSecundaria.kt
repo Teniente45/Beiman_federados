@@ -14,7 +14,6 @@ package com.miapp.kairos24h.movilAPK
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -28,10 +27,10 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.FrameLayout
 import androidx.activity.ComponentActivity
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import com.miapp.kairos24h.movilAPK.SolapaWebView
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -54,10 +53,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -67,16 +64,16 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import coil.ImageLoader
 import coil.compose.AsyncImage
-import coil.decode.ImageDecoderDecoder
 import coil.request.ImageRequest
 import com.miapp.beiman_federados.R
 import com.miapp.kairos24h.PaginaPrincipal
 import com.miapp.kairos24h.enlaces_internos.BuildURLmovil
+import com.miapp.kairos24h.enlaces_internos.EstilosBeiman
 import com.miapp.kairos24h.sesionesYSeguridad.AuthManager
 import com.miapp.kairos24h.sesionesYSeguridad.ManejoDeSesion
 import kotlinx.coroutines.delay
@@ -99,8 +96,6 @@ class PaginaSecundaria : ComponentActivity() {
             navigateToLogin()
             return
         }
-        val usuario = intent.getStringExtra("usuario") ?: storedUser
-        val password = intent.getStringExtra("password") ?: storedPassword
 
         // Creamos el FrameLayout raíz
         val root = FrameLayout(this).apply { id = View.generateViewId() }
@@ -268,7 +263,6 @@ class PaginaSecundaria : ComponentActivity() {
     // Manejador principal usado para controlar los tiempos de la sesión activa
 }
 
-
 // Composable principal de la pantalla de fichaje. Muestra WebView con login automático, cuadro para fichar, barra superior e inferior y lógica de navegación.
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
@@ -278,19 +272,12 @@ fun WebViewScreen(
 ) {
     // Controla si debe mostrarse la pantalla de carga
     var isLoading by remember { mutableStateOf(true) }
-    // Controla la visibilidad del cuadro para fichar
-    val showCuadroParaFicharState = remember { mutableStateOf(true) }
+    // Controla la visibilidad del recuadro que solapa al webview
+    val showSolapaWebViewState = remember { mutableStateOf(true) }
     // Ámbito de corrutina usado para manejar delays y tareas asincrónicas
-    val scope = rememberCoroutineScope()
     // Controla la visibilidad del diálogo de confirmación para cerrar sesión
     val showLogoutDialog = remember { mutableStateOf(false) }
 
-    // Lista de recursos de imagen para el avatar del usuario
-    val imageList = listOf(
-        R.drawable.cliente32,
-    )
-    // Estado recordado para el índice de imagen del avatar
-    var imageIndex by remember { mutableIntStateOf(0) }
 
     // Ya no se necesita webViewState; usamos webView directamente
     // Contexto actual de la aplicación (necesario para acceder a preferencias y otros recursos)
@@ -322,18 +309,14 @@ fun WebViewScreen(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Sección izquierda: botón avatar que alterna imagen + nombre del usuario
+            // Sección izquierda: icono de avatar fijo + nombre del usuario
             Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(
-                    onClick = { imageIndex = (imageIndex + 1) % imageList.size }
-                ) {
-                    Icon(
-                        painter = painterResource(id = imageList[imageIndex]),
-                        contentDescription = "Usuario",
-                        modifier = Modifier.size(30.dp),
-                        tint = Color.Unspecified
-                    )
-                }
+                Icon(
+                    painter = painterResource(id = R.drawable.cliente32),
+                    contentDescription = "Usuario",
+                    modifier = Modifier.size(30.dp),
+                    tint = Color.Unspecified
+                )
                 Text(
                     text = cUsuario,
                     color = Color(0xFF7599B6),
@@ -357,95 +340,128 @@ fun WebViewScreen(
                 .weight(1f)
                 .fillMaxWidth()
         ) {
-            // Diálogo modal que solicita confirmación para cerrar la sesión
-            if (showLogoutDialog.value) {
-                AlertDialog(
-                    onDismissRequest = { showLogoutDialog.value = false },
-                    title = {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .background(Color(0xFF7599B6))
-                                .padding(12.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = "¿Cerrar sesión?",
-                                color = Color.White,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                        }
-                    },
-                    text = {
-                        Text(
-                            "Si continuas cerrarás tu sesión, ¿Seguro que es lo que quieres hacer?",
-                            color = Color.Black
-                        )
-                    },
-                    confirmButton = {},
-                    dismissButton = {
-                        Row(modifier = Modifier.fillMaxWidth()) {
-                            Button(
-                                onClick = {
-                                    showLogoutDialog.value = false
-                                    webView.apply {
-                                        clearCache(true)
-                                        clearHistory()
-                                    }
-                                    CookieManager.getInstance().removeAllCookies(null)
-                                    CookieManager.getInstance().flush()
-                                    AuthManager.clearAllUserData(context)
-                                    onLogout()
-                                },
-                                modifier = Modifier.weight(1f),
-                                colors = ButtonDefaults.buttonColors(
-                                    containerColor = Color(0xFF7599B6),
-                                    contentColor = Color.White
-                                ),
-                                shape = RectangleShape
-                            ) {
-                                Text("Sí")
-                            }
+            // Pantalla de carga que se muestra mientras se realiza la autenticación automática
+            LoadingScreen(isLoading = isLoading)
+            // Solapa blanca superpuesta al WebView
+            SolapaWebView(
+                isVisibleState = showSolapaWebViewState,
+                webView = webView
+            )
+        }
 
-                            Spacer(modifier = Modifier.width(30.dp))
-
-                            Button(
-                                onClick = {
-                                    showLogoutDialog.value = false
-                                },
-                                modifier = Modifier.weight(1f),
-                                colors = ButtonDefaults.buttonColors(
-                                    containerColor = Color(0xFF7599B6),
-                                    contentColor = Color.White
-                                ),
-                                shape = RectangleShape
-                            ) {
-                                Text("No")
-                            }
-                        }
-                    },
-                    shape = RoundedCornerShape(30.dp)
+        // Barra inferior: botón flotante circular centrado para mostrar el cuadro de fichaje
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            IconButton(
+                onClick = { showSolapaWebViewState.value = true },
+                modifier = Modifier
+                    .size(EstilosBeiman.botonSolapaSize)
+                    .background(EstilosBeiman.colorFondoBotonSolapa, shape = EstilosBeiman.formaCircular)
+                    .zIndex(2f)
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.menu_opciones),
+                    contentDescription = "Abrir menú",
+                    tint = EstilosBeiman.colorIconoBotonSolapa,
+                    modifier = Modifier.size(EstilosBeiman.iconoSolapaSize)
                 )
             }
         }
     }
 
+    // Diálogo modal que solicita confirmación para cerrar la sesión
+    if (showLogoutDialog.value) {
+        AlertDialog(
+            onDismissRequest = { showLogoutDialog.value = false },
+            title = {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(Color(0xFF7599B6))
+                        .padding(12.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "¿Cerrar sesión?",
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            },
+            text = {
+                Text(
+                    "Si continuas cerrarás tu sesión, ¿Seguro que es lo que quieres hacer?",
+                    color = Color.Black
+                )
+            },
+            confirmButton = {},
+            dismissButton = {
+                Row(modifier = Modifier.fillMaxWidth()) {
+                    Button(
+                        onClick = {
+                            showLogoutDialog.value = false
+                            webView.apply {
+                                clearCache(true)
+                                clearHistory()
+                            }
+                            CookieManager.getInstance().removeAllCookies(null)
+                            CookieManager.getInstance().flush()
+                            AuthManager.clearAllUserData(context)
+                            onLogout()
+                        },
+                        modifier = Modifier.weight(1f),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF7599B6),
+                            contentColor = Color.White
+                        ),
+                        shape = RectangleShape
+                    ) {
+                        Text("Sí")
+                    }
 
-// Pantalla de carga que muestra un GIF mientras se carga la vista principal (WebView o datos)
-@RequiresApi(Build.VERSION_CODES.P)
+                    Spacer(modifier = Modifier.width(30.dp))
+
+                    Button(
+                        onClick = {
+                            showLogoutDialog.value = false
+                        },
+                        modifier = Modifier.weight(1f),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF7599B6),
+                            contentColor = Color.White
+                        ),
+                        shape = RectangleShape
+                    ) {
+                        Text("No")
+                    }
+                }
+            },
+            shape = RoundedCornerShape(30.dp)
+        )
+    }
+}
+
+// ================================== Preview de la pantalla ==================================
+@Composable
+@Preview(showBackground = true)
+fun PreviewWebViewScreen() {
+    // No se puede previsualizar el WebView real en preview, así que pasamos un dummy
+    WebViewScreen(
+        webView = WebView(LocalContext.current),
+        onLogout = {}
+    )
+}
+// ================================== Preview de la pantalla ==================================
+
+
 @Composable
 fun LoadingScreen(isLoading: Boolean) {
     if (isLoading) {
-        val context = LocalContext.current
-        val imageLoader = ImageLoader.Builder(context)
-            .components {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                    add(ImageDecoderDecoder.Factory())
-                }
-            }
-            .build()
-
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -454,16 +470,11 @@ fun LoadingScreen(isLoading: Boolean) {
             contentAlignment = Alignment.Center
         ) {
             AsyncImage(
-                model = ImageRequest.Builder(context)
+                model = ImageRequest.Builder(LocalContext.current)
                     .data(R.drawable.version_2)
-                    .crossfade(true)
                     .build(),
-                imageLoader = imageLoader,
-                contentDescription = "Loading GIF",
-                modifier = Modifier.size(200.dp)
+                contentDescription = "Cargando...",
             )
         }
     }
 }
-    }
-

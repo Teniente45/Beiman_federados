@@ -128,6 +128,7 @@ class PaginaPrincipal : ComponentActivity() {
                                                             xEmpleado.tLogo,
                                                             xEmpleado.cTipEmp
                                                         )
+                                                        navigateToFichar(xEmpleado.usuario, xEmpleado.password)
                                                     } else {
                                                         Toast.makeText(
                                                             this@PaginaPrincipal,

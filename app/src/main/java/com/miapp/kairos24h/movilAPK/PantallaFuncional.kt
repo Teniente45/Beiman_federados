@@ -16,8 +16,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -46,7 +44,6 @@ import com.miapp.kairos24h.enlaces_internos.EstilosBeiman
 @Composable
 fun SolapaWebView(
     isVisibleState: MutableState<Boolean>,
-    fichajes: List<String>,
     webView: WebView
 ) {
     // Mover refreshTrigger fuera del if para que se ejecute siempre
@@ -64,6 +61,7 @@ fun SolapaWebView(
             lifecycleOwner.lifecycle.removeObserver(observer)
         }
     }
+    // Cambiar que se accione por comportamiento de botón
     if (isVisibleState.value) {
         Box(
             modifier = Modifier
@@ -71,25 +69,9 @@ fun SolapaWebView(
                 .background(Color.White)
                 .zIndex(2f)
         ) {
-            Column(
-                verticalArrangement = Arrangement.spacedBy(16.dp),
-                modifier = Modifier
-                    .fillMaxSize()
-                    // Habilita el scroll vertical:
-                    .verticalScroll(rememberScrollState())
-                    .padding(horizontal = 20.dp)
-            ) {
-                // Mostrar lista de fichajes si existe
-                if (fichajes.isNotEmpty()) {
-                    Text(text = "Fichajes del Día", color = Color.Blue)
-                    fichajes.forEach { fichaje ->
-                        Text(text = fichaje, color = Color.DarkGray)
-                    }
-                }
-                Logo_empresa_cliente()
-                Logo_empresa_desarrolladora()
-                NavegadorBeiman(webView, androidx.compose.ui.platform.LocalContext.current)
-            }
+            Logo_empresa_cliente()
+            Logo_empresa_desarrolladora()
+            NavegadorBeiman(webView, androidx.compose.ui.platform.LocalContext.current)
         }
     }
 }

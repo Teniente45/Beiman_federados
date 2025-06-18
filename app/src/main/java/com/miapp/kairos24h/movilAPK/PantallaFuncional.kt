@@ -154,12 +154,12 @@ fun NavegadorIcono(label: String, iconRes: Int, onClick: () -> Unit) {
         Image(
             painter = painterResource(id = iconRes),
             contentDescription = label,
-            modifier = Modifier.size(96.dp)
+            modifier = Modifier.size(76.dp)
         )
         Spacer(modifier = Modifier.height(10.dp)) // separación entre imagen y texto
         Text(
             text = label,
-            style = EstilosBeiman.textoEstilo.copy(fontSize = 22.sp),
+            style = EstilosBeiman.textoEstilo.copy(fontSize = 14.sp),
             textAlign = TextAlign.Center,
             maxLines = Int.MAX_VALUE,
             softWrap = true
@@ -175,65 +175,69 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
             .padding(horizontal = 6.dp, vertical = 4.dp)
             .background(Color.Transparent),
         horizontalArrangement = Arrangement.spacedBy(30.dp, Alignment.CenterHorizontally),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.Top
     ) {
-        Column(
-            verticalArrangement = Arrangement.spacedBy(30.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            NavegadorIcono(
-                label = "Mis Citas",
-                iconRes = R.drawable.mis_citas,
-                onClick = {
-                    webView.loadUrl(BuildURLmovil.verCita(context))
-                    isVisibleState.value = false
-                }
-            )
-            NavegadorIcono(
-                label = "Póliza de seguros",
-                iconRes = R.drawable.poliza_de_seguros,
-                onClick = {
-                    webView.loadUrl(BuildURLmovil.verProtocoloYSeguridad(context))
-                    isVisibleState.value = false
-                }
-            )
-            NavegadorIcono(
-                label = "Comunicar un parte",
-                iconRes = R.drawable.comunicar_un_parte,
-                onClick = {
-                    webView.loadUrl(BuildURLmovil.comunicarParte(context))
-                    isVisibleState.value = false
-                }
-            )
+        Box(modifier = Modifier.align(Alignment.Top)) {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(30.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                NavegadorIcono(
+                    label = "Mis Citas",
+                    iconRes = R.drawable.mis_citas,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.verCita(context))
+                        isVisibleState.value = false
+                    }
+                )
+                NavegadorIcono(
+                    label = "Póliza de seguros",
+                    iconRes = R.drawable.poliza_de_seguros,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.verProtocoloYSeguridad(context))
+                        isVisibleState.value = false
+                    }
+                )
+                NavegadorIcono(
+                    label = "Comunicar un parte",
+                    iconRes = R.drawable.comunicar_un_parte,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.comunicarParte(context))
+                        isVisibleState.value = false
+                    }
+                )
+            }
         }
-        Column(
-            verticalArrangement = Arrangement.spacedBy(30.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            NavegadorIcono(
-                label = "Mis informes",
-                iconRes = R.drawable.mis_informes,
-                onClick = {
-                    webView.loadUrl(BuildURLmovil.verInforme(context))
-                    isVisibleState.value = false
-                }
-            )
-            NavegadorIcono(
-                label = "Tramitar alta voluntaria",
-                iconRes = R.drawable.tramitar_alta_voluntaria,
-                onClick = {
-                    webView.loadUrl(BuildURLmovil.pedirAltaVoluntaria(context))
-                    isVisibleState.value = false
-                }
-            )
-            NavegadorIcono(
-                label = "Subir un documento",
-                iconRes = R.drawable.subir_documento,
-                onClick = {
-                    webView.loadUrl(BuildURLmovil.subirDocumento(context))
-                    isVisibleState.value = false
-                }
-            )
+        Box(modifier = Modifier.align(Alignment.Top)) {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(30.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                NavegadorIcono(
+                    label = "Mis informes",
+                    iconRes = R.drawable.mis_informes,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.verInforme(context))
+                        isVisibleState.value = false
+                    }
+                )
+                NavegadorIcono(
+                    label = "Tramitar alta voluntaria",
+                    iconRes = R.drawable.tramitar_alta_voluntaria,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.pedirAltaVoluntaria(context))
+                        isVisibleState.value = false
+                    }
+                )
+                NavegadorIcono(
+                    label = "Subir un documento",
+                    iconRes = R.drawable.subir_documento,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.subirDocumento(context))
+                        isVisibleState.value = false
+                    }
+                )
+            }
         }
     }
 }

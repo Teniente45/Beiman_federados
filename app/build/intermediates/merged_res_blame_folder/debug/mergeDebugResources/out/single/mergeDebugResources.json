@@ -8,12 +8,12 @@
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/drawable/logo_desarrolladora.png"
     },
     {
-        "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/drawable_poliza_de_seguros.png.flat",
@@ -146,6 +146,10 @@
     {
         "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/drawable_ic_calendario.png.flat",
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/drawable/ic_calendario.png"
+    },
+    {
+        "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/drawable_menu_opciones.png.flat",
+        "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/drawable/menu_opciones.png"
     },
     {
         "merged": "com.miapp.beiman_federados.app-debug-74:/drawable_menu_opciones.png.flat",

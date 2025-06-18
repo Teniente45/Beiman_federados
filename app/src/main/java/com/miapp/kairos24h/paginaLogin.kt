@@ -301,30 +301,6 @@ fun DisplayLogo(
                             style = MaterialTheme.typography.bodyLarge
                         )
                     }
-
-                    // Solicita al usuario que acepte el permiso de ubicación
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .fillMaxWidth(0.85f)
-                            .padding(top = 4.dp),
-                        horizontalArrangement = Arrangement.Start
-                    ) {
-                        Checkbox(
-                            checked = isLocationChecked,
-                            onCheckedChange = { checked ->
-                                if (checked) {
-                                    requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
-                                } else {
-                                    isLocationChecked = false
-                                }
-                            }
-                        )
-                        Text(
-                            text = "Acepto que la app acceda a la ubicación donde ficho",
-                            style = MaterialTheme.typography.bodyLarge
-                        )
-                    }
                 }
 
                 // Muestra un mensaje de error si existe
@@ -352,7 +328,7 @@ fun DisplayLogo(
                     },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7599B6)),
                     modifier = Modifier.fillMaxWidth(),
-                    enabled = usuario.value.isNotEmpty() && password.value.isNotEmpty() && isLocationChecked
+                    enabled = usuario.value.isNotEmpty() && password.value.isNotEmpty()
                 ) {
                     Text("Acceso", color = Color.White, style = MaterialTheme.typography.bodyLarge)
                 }

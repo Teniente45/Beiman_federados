@@ -14,6 +14,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -34,18 +35,15 @@ object ImagenesMovil {
         val tLogo = AuthManager.getUserCredentials(context).tLogo
         return if (tLogo.isNotBlank() && tLogo != "null") tLogo else null
     }
-    val lodoDesarrolladora = R.drawable.logo_i3data
+    val lodoDesarrolladora = R.drawable.logo_desarrolladora
 
 
 
-    // Centraliza las características del logo de empresa cliente
-    val logoBoxModifier = Modifier
-        .fillMaxWidth()
-        .padding(vertical = 5.dp)
-    // Estilo aplicado al logo (tamaño y proporción)
+    // == Estilos de logo principal Beiman =====================
+    // Modificador para el logo principal del cliente (tamaño cuadrado uniforme)
     val logoModifier = Modifier
-        .width(356.dp)
-        .height(100.dp)
+        .size(280.dp)
+    // == Estilos de logo principal Beiman =====================
 
 
     // Centraliza las características del contenedor del logo de desarrolladora

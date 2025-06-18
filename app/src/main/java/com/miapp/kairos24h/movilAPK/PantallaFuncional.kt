@@ -95,13 +95,13 @@ fun SolapaWebView(
                 .zIndex(2f),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Box(modifier = Modifier.padding(top = 8.dp, bottom = 10.dp)) {
+            Box(modifier = Modifier.padding(top = EstilosBeiman.Dimensiones.logoPaddingTop, bottom = EstilosBeiman.Dimensiones.logoPaddingBottom)) {
                 Logo_empresa_cliente()
             }
-            Box(modifier = Modifier.padding(top = 20.dp, bottom = 2.dp)) {
+            Box(modifier = Modifier.padding(top = EstilosBeiman.Dimensiones.navegadorPaddingTop, bottom = EstilosBeiman.Dimensiones.navegadorPaddingBottom)) {
                 NavegadorBeiman(isVisibleState, webView, LocalContext.current)
             }
-            Box(modifier = Modifier.padding(top = 10.dp, bottom = 4.dp)) {
+            Box(modifier = Modifier.padding(top = EstilosBeiman.Dimensiones.desarrolladoraPaddingTop, bottom = EstilosBeiman.Dimensiones.desarrolladoraPaddingBottom)) {
                 Logo_empresa_desarrolladora()
             }
         }
@@ -110,10 +110,7 @@ fun SolapaWebView(
 
 @Composable
 fun Logo_empresa_cliente() {
-    Box(
-        modifier = ImagenesMovil.logoBoxModifier,
-        contentAlignment = Alignment.Center
-    ) {
+    Box {
         ImagenesMovil.LogoClienteRemoto()
     }
 }
@@ -157,9 +154,9 @@ fun NavegadorIcono(label: String, iconRes: Int, onClick: () -> Unit) {
         Image(
             painter = painterResource(id = iconRes),
             contentDescription = label,
-            modifier = Modifier.size(86.dp)
+            modifier = Modifier.size(EstilosBeiman.Dimensiones.iconSize)
         )
-        Spacer(modifier = Modifier.height(8.dp)) // separación entre imagen y texto
+        Spacer(modifier = Modifier.height(EstilosBeiman.Dimensiones.iconTextSpacing)) // separación entre imagen y texto
 
         val lineCount = 3
         val paddedLabel = buildString {
@@ -173,13 +170,13 @@ fun NavegadorIcono(label: String, iconRes: Int, onClick: () -> Unit) {
         Text(
             text = paddedLabel,
             style = EstilosBeiman.textoEstilo.copy(
-                fontSize = 18.sp,
+                fontSize = EstilosBeiman.Dimensiones.textFontSize,
                 color = Color(0xFF0652A1)
             ),
             textAlign = TextAlign.Center,
             softWrap = true,
             maxLines = 3,
-            modifier = Modifier.width(96.dp)
+            modifier = Modifier.width(EstilosBeiman.Dimensiones.textWidth)
         )
     }
 }
@@ -189,14 +186,14 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 6.dp, vertical = 1.dp)
+            .padding(horizontal = EstilosBeiman.Dimensiones.paddingHorizontal, vertical = EstilosBeiman.Dimensiones.paddingVertical)
             .background(Color.Transparent),
-        horizontalArrangement = Arrangement.spacedBy(80.dp, Alignment.CenterHorizontally),
+        horizontalArrangement = Arrangement.spacedBy(EstilosBeiman.Dimensiones.rowSpacing, Alignment.CenterHorizontally),
         verticalAlignment = Alignment.Top
     ) {
         Box(modifier = Modifier.align(Alignment.Top)) {
             Column(
-                verticalArrangement = Arrangement.spacedBy(20.dp),
+                verticalArrangement = Arrangement.spacedBy(EstilosBeiman.Dimensiones.columnSpacing),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 NavegadorIcono(
@@ -235,7 +232,7 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
         }
         Box(modifier = Modifier.align(Alignment.Top)) {
             Column(
-                verticalArrangement = Arrangement.spacedBy(20.dp),
+                verticalArrangement = Arrangement.spacedBy(EstilosBeiman.Dimensiones.columnSpacing),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 NavegadorIcono(

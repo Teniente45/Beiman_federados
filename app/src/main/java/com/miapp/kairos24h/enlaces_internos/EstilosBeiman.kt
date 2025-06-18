@@ -10,9 +10,6 @@ import androidx.compose.ui.text.font.FontWeight
 
 object EstilosBeiman {
 // == Estilos de los inconos de PantallaFuncional =====================
-    // Modificador para ajustar el tamaño de los iconos
-    val iconoSize = Modifier.size(60.dp)
-
     // Estilo del texto debajo de cada icono
     val textoEstilo = TextStyle(
         color = Color(0xFF005BAC), // Azul corporativo
@@ -21,6 +18,50 @@ object EstilosBeiman {
     )
 // == Estilos de los inconos de PantallaFuncional =====================
 
+
+    object Dimensiones {
+        // Tamaño general de los iconos utilizados en la interfaz (por ejemplo, en botones o columnas)
+        val iconSize = 86.dp
+
+        // Espacio vertical entre el icono y el texto que aparece debajo de él
+        val iconTextSpacing = 8.dp
+
+        // Tamaño de fuente del texto que acompaña a los iconos
+        val textFontSize = 18.sp
+
+        // Ancho máximo que puede ocupar el texto debajo del icono antes de hacer salto de línea
+        val textWidth = 96.dp
+
+        // Espaciado horizontal entre columnas (por ejemplo, entre un conjunto de iconos alineados horizontalmente)
+        val columnSpacing = 20.dp
+
+        // Espaciado vertical entre filas de iconos o elementos visuales apilados verticalmente
+        val rowSpacing = 80.dp
+
+        // Relleno (padding) horizontal interno en los contenedores que enmarcan iconos o bloques
+        val paddingHorizontal = 6.dp
+
+        // Relleno (padding) vertical interno en los contenedores que enmarcan iconos o bloques
+        val paddingVertical = 1.dp
+
+        // Espacio adicional (margen superior) que se deja por encima del logo principal del cliente
+        val logoPaddingTop = 8.dp
+
+        // Espacio adicional (margen inferior) que se deja debajo del logo principal del cliente
+        val logoPaddingBottom = 10.dp
+
+        // Espacio superior que se deja entre el borde del contenedor y la barra de navegación inferior (si existe)
+        val navegadorPaddingTop = 20.dp
+
+        // Espacio inferior que se deja entre el borde del contenedor y la barra de navegación inferior (si existe)
+        val navegadorPaddingBottom = 2.dp
+
+        // Espacio superior aplicado sobre el logo de la desarrolladora (normalmente centrado en la parte inferior de la pantalla)
+        val desarrolladoraPaddingTop = 10.dp
+
+        // Espacio inferior aplicado debajo del logo de la desarrolladora
+        val desarrolladoraPaddingBottom = 4.dp
+    }
 
 // == Estilos del botón que muestra SolapaWebView (fun NavegadorBeiman) =====================
     // Tamaños aumentados para mayor accesibilidad y visibilidad:
@@ -38,36 +79,6 @@ object EstilosBeiman {
 
     // Forma del botón flotante, definida como círculo perfecto
     val formaCircular = androidx.compose.foundation.shape.CircleShape
-
-
-    // == Estilos para los botones de NavegadorBeiman =====================
-
-    // Define el padding horizontal de la fila que contiene todos los botones.
-    // Se puede modificar para ajustar los márgenes laterales del grupo de iconos.
-    val paddingHorizontal = 32.dp
-    val paddingVertical = 6.dp
-
-    // Define la separación horizontal entre los botones de navegación
-    // Aumentar este valor separará más los iconos entre columnas
-    val espaciadoEntreBotones = 8.dp
-
-    // Define el tamaño máximo del icono dentro de cada columna del NavegadorBeiman
-    // Los textos se ajustarán debajo de este ancho
-    val maxIconWidth = 64.dp
-
-    // Tamaño del icono mostrado sobre cada texto de opción en el NavegadorBeiman
-    val tamanoIconoNavegador = 30.dp
-
-    // Estilo del texto que aparece debajo de cada icono
-    // Puedes ajustar el color, tamaño de fuente o grosor aquí
-    val estiloTextoNavegador = TextStyle(
-        color = Color(0xFF005BAC), // Color azul corporativo
-        fontSize = 12.sp,
-        fontWeight = FontWeight.SemiBold
-    )
-
-    // == Estilos para los botones de NavegadorBeiman =====================
-
 
 // == Estilos del botón que muestra SolapaWebView =====================
 

@@ -350,25 +350,27 @@ fun WebViewScreen(
         }
 
         // Barra inferior: botón flotante circular centrado para mostrar el cuadro de fichaje
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(56.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            IconButton(
-                onClick = { showSolapaWebViewState.value = true },
+        if (!showSolapaWebViewState.value) {
+            Box(
                 modifier = Modifier
-                    .size(EstilosBeiman.botonSolapaSize)
-                    .background(EstilosBeiman.colorFondoBotonSolapa, shape = EstilosBeiman.formaCircular)
-                    .zIndex(2f)
+                    .fillMaxWidth()
+                    .height(56.dp),
+                contentAlignment = Alignment.Center
             ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.menu_opciones),
-                    contentDescription = "Abrir menú",
-                    tint = EstilosBeiman.colorIconoBotonSolapa,
-                    modifier = Modifier.size(EstilosBeiman.iconoSolapaSize)
-                )
+                IconButton(
+                    onClick = { showSolapaWebViewState.value = true },
+                    modifier = Modifier
+                        .size(EstilosBeiman.botonSolapaSize)
+                        .background(EstilosBeiman.colorFondoBotonSolapa, shape = EstilosBeiman.formaCircular)
+                        .zIndex(2f)
+                ) {
+                    Icon(
+                        painter = painterResource(id = R.drawable.menu_opciones),
+                        contentDescription = "Abrir menú",
+                        tint = EstilosBeiman.colorIconoBotonSolapa,
+                        modifier = Modifier.size(EstilosBeiman.iconoSolapaSize)
+                    )
+                }
             }
         }
     }

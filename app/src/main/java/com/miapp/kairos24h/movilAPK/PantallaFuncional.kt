@@ -18,6 +18,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.runtime.mutableStateOf
@@ -58,6 +60,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.ui.unit.sp
 
 
@@ -88,17 +91,17 @@ fun SolapaWebView(
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color.White)
+                .verticalScroll(rememberScrollState())
                 .zIndex(2f),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceBetween
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Box(modifier = Modifier.padding(vertical = dynamicVerticalPadding())) {
+            Box(modifier = Modifier.padding(top = 8.dp, bottom = 10.dp)) {
                 Logo_empresa_cliente()
             }
-            Box(modifier = Modifier.padding(vertical = dynamicVerticalPadding())) {
+            Box(modifier = Modifier.padding(top = 20.dp, bottom = 2.dp)) {
                 NavegadorBeiman(isVisibleState, webView, LocalContext.current)
             }
-            Box(modifier = Modifier.padding(vertical = dynamicVerticalPadding())) {
+            Box(modifier = Modifier.padding(top = 10.dp, bottom = 4.dp)) {
                 Logo_empresa_desarrolladora()
             }
         }
@@ -149,20 +152,34 @@ fun NavegadorIcono(label: String, iconRes: Int, onClick: () -> Unit) {
                     scale = 1f
                 }, 1000)
             }
-            .padding(bottom = 6.dp) // padding inferior general mínimo entre bloques
+            .padding(bottom = 2.dp) // padding inferior general mínimo entre bloques
     ) {
         Image(
             painter = painterResource(id = iconRes),
             contentDescription = label,
-            modifier = Modifier.size(76.dp)
+            modifier = Modifier.size(86.dp)
         )
-        Spacer(modifier = Modifier.height(10.dp)) // separación entre imagen y texto
+        Spacer(modifier = Modifier.height(8.dp)) // separación entre imagen y texto
+
+        val lineCount = 3
+        val paddedLabel = buildString {
+            append(label)
+            val lines = label.count { it == '\n' } + 1
+            repeat(maxOf(0, lineCount - lines)) {
+                append("\n\u00A0")
+            }
+        }
+
         Text(
-            text = label,
-            style = EstilosBeiman.textoEstilo.copy(fontSize = 14.sp),
+            text = paddedLabel,
+            style = EstilosBeiman.textoEstilo.copy(
+                fontSize = 18.sp,
+                color = Color(0xFF0652A1)
+            ),
             textAlign = TextAlign.Center,
-            maxLines = Int.MAX_VALUE,
-            softWrap = true
+            softWrap = true,
+            maxLines = 3,
+            modifier = Modifier.width(96.dp)
         )
     }
 }
@@ -172,14 +189,14 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 6.dp, vertical = 4.dp)
+            .padding(horizontal = 6.dp, vertical = 1.dp)
             .background(Color.Transparent),
-        horizontalArrangement = Arrangement.spacedBy(30.dp, Alignment.CenterHorizontally),
+        horizontalArrangement = Arrangement.spacedBy(80.dp, Alignment.CenterHorizontally),
         verticalAlignment = Alignment.Top
     ) {
         Box(modifier = Modifier.align(Alignment.Top)) {
             Column(
-                verticalArrangement = Arrangement.spacedBy(30.dp),
+                verticalArrangement = Arrangement.spacedBy(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 NavegadorIcono(
@@ -210,7 +227,7 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
         }
         Box(modifier = Modifier.align(Alignment.Top)) {
             Column(
-                verticalArrangement = Arrangement.spacedBy(30.dp),
+                verticalArrangement = Arrangement.spacedBy(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 NavegadorIcono(
@@ -240,15 +257,6 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
             }
         }
     }
-}
-
-@Composable
-fun dynamicVerticalPadding(): Dp {
-    val context = LocalContext.current
-    val density = LocalDensity.current
-    val screenHeightPx = context.resources.displayMetrics.heightPixels
-    val screenHeightDp = with(density) { screenHeightPx.toDp() }
-    return maxOf(screenHeightDp * 0.05f, 6.dp)
 }
 
 // Previsualización en tiempo real de SolapaWebView

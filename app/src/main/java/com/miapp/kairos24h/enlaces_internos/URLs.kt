@@ -104,6 +104,8 @@ object BuildURLmovil {
     const val ACTION_LOGIN = "r=site/index"
     const val ACTION_VERCITA = ""
     const val ACTION_VERINFORME = ""
+    const val ACTION_VERPARTEMEDICO = ""
+    const val ACTION_VERMISDATOS = ""
     const val ACTION_VERPROTOCOLOYSEGURIDAD = ""
     const val ACTION_PEDIRALTAVOLUNTARIA = ""
     const val ACTION_SUBIRDOCUMENTO = ""
@@ -120,6 +122,16 @@ object BuildURLmovil {
 
     fun verInforme(context: Context): String {
         val url = getURLUsada(context) + ACTION_VERINFORME
+        return url
+    }
+
+    fun verParteMedico(context: Context): String {
+        val url = getURLUsada(context) + ACTION_VERPARTEMEDICO
+        return url
+    }
+
+    fun verMisDatos(context: Context): String {
+        val url = getURLUsada(context) + ACTION_VERMISDATOS
         return url
     }
 

@@ -208,6 +208,14 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
                     }
                 )
                 NavegadorIcono(
+                    label = "Mis Datos",
+                    iconRes = R.drawable.mis_datos,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.verMisDatos(context))
+                        isVisibleState.value = false
+                    }
+                )
+                NavegadorIcono(
                     label = "Póliza de seguros",
                     iconRes = R.drawable.poliza_de_seguros,
                     onClick = {
@@ -235,6 +243,14 @@ fun NavegadorBeiman(isVisibleState: MutableState<Boolean>, webView: WebView, con
                     iconRes = R.drawable.mis_informes,
                     onClick = {
                         webView.loadUrl(BuildURLmovil.verInforme(context))
+                        isVisibleState.value = false
+                    }
+                )
+                NavegadorIcono(
+                    label = "Mis partes medicos",
+                    iconRes = R.drawable.mis_partes,
+                    onClick = {
+                        webView.loadUrl(BuildURLmovil.verParteMedico(context))
                         isVisibleState.value = false
                     }
                 )

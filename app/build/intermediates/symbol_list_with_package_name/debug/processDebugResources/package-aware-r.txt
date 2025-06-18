@@ -3118,7 +3118,9 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu_opciones
 drawable mis_citas
+drawable mis_datos
 drawable mis_informes
+drawable mis_partes
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked

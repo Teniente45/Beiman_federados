@@ -8,12 +8,12 @@
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/drawable/logo_desarrolladora.png"
     },
     {
-        "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/drawable_poliza_de_seguros.png.flat",
@@ -116,6 +116,10 @@
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "com.miapp.beiman_federados.app-debug-74:/drawable_mis_datos.png.flat",
+        "source": "com.miapp.beiman_federados.app-main-76:/drawable/mis_datos.png"
+    },
+    {
         "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/drawable_logo_i3data.png.flat",
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/drawable/logo_i3data.png"
     },
@@ -152,8 +156,8 @@
         "source": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-main-76:/drawable/menu_opciones.png"
     },
     {
-        "merged": "com.miapp.beiman_federados.app-debug-74:/drawable_menu_opciones.png.flat",
-        "source": "com.miapp.beiman_federados.app-main-76:/drawable/menu_opciones.png"
+        "merged": "com.miapp.beiman_federados.app-debug-74:/drawable_mis_partes.png.flat",
+        "source": "com.miapp.beiman_federados.app-main-76:/drawable/mis_partes.png"
     },
     {
         "merged": "/Users/juanlopezmarin/.gradle/daemon/8.10.2/com.miapp.beiman_federados.app-debug-74:/drawable_comunicar_un_parte.png.flat",

@@ -23,7 +23,9 @@ drawable logo_desarrolladora
 drawable logo_i3data
 drawable menu_opciones
 drawable mis_citas
+drawable mis_datos
 drawable mis_informes
+drawable mis_partes
 drawable poliza_de_seguros
 drawable subir_documento
 drawable tramitar_alta_voluntaria

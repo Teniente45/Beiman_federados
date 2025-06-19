@@ -1,4 +1,4 @@
-package com.example.kairos24h.ui.theme
+package com.miapp.kairos24h.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

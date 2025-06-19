@@ -1,12 +1,10 @@
 package com.miapp.kairos24h.enlaces_internos
 
-import androidx.compose.foundation.layout.size
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.text.font.FontWeight
 
 object EstilosBeiman {
 // == Estilos de los inconos de PantallaFuncional =====================

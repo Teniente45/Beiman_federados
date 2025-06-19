@@ -10,6 +10,7 @@
 
 package com.miapp.kairos24h.sesionesYSeguridad
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import com.miapp.kairos24h.enlaces_internos.WebViewURL
@@ -159,6 +160,7 @@ object AuthManager {
         }
     }
     // Borrar completamente los datos de usuario almacenados en SharedPreferences
+    @SuppressLint("UseKtx")
     fun clearAllUserData(context: Context) {
         val userPrefs = context.getSharedPreferences("UserSession", Context.MODE_PRIVATE)
         userPrefs.edit().clear().apply()

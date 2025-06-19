@@ -6,6 +6,7 @@
  * Proyecto académico de desarrollo Android.
  */
 
+/**
 @file:Suppress("DEPRECATION")
 
 package com.miapp.kairos24h.sesionesYSeguridad
@@ -187,3 +188,5 @@ object SeguridadUtils {
         return true
     }
 }
+
+ */

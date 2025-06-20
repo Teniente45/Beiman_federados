@@ -80,6 +80,44 @@ import com.miapp.kairos24h.sesionesYSeguridad.AuthManager
 import com.miapp.kairos24h.sesionesYSeguridad.ManejoDeSesion
 import kotlinx.coroutines.delay
 
+// Encapsula la lógica para crear y configurar un WebView con márgenes seguros
+@SuppressLint("SetJavaScriptEnabled")
+fun createConfiguredWebView(context: Context): Pair<WebView, FrameLayout.LayoutParams> {
+    val webView = WebView(context).apply {
+        val webSettings = settings
+        webSettings.javaScriptEnabled = true
+        webSettings.loadWithOverviewMode = true
+        webSettings.useWideViewPort = true
+        webSettings.domStorageEnabled = true
+        webSettings.setSupportZoom(true)
+        webSettings.builtInZoomControls = true
+        webSettings.displayZoomControls = false
+        webSettings.javaScriptCanOpenWindowsAutomatically = true
+        webSettings.setSupportMultipleWindows(true)
+        webSettings.databaseEnabled = true
+        webSettings.allowFileAccess = true
+        webSettings.allowContentAccess = true
+        webSettings.userAgentString =
+            "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
+
+        isVerticalScrollBarEnabled = true
+        isHorizontalScrollBarEnabled = true
+        scrollBarStyle = WebView.SCROLLBARS_INSIDE_OVERLAY
+    }
+
+    val topBarHeightPx = (30 * context.resources.displayMetrics.density).toInt()
+    val bottomBarHeightPx = (56 * context.resources.displayMetrics.density).toInt()
+
+    val layoutParams = FrameLayout.LayoutParams(
+        ViewGroup.LayoutParams.MATCH_PARENT,
+        ViewGroup.LayoutParams.MATCH_PARENT
+    ).apply {
+        setMargins(0, topBarHeightPx, 0, bottomBarHeightPx)
+    }
+
+    return Pair(webView, layoutParams)
+}
+
 class PaginaSecundaria : ComponentActivity() {
 
     private lateinit var webView: WebView
@@ -103,90 +141,67 @@ class PaginaSecundaria : ComponentActivity() {
         // Creamos el FrameLayout raíz
         val root = FrameLayout(this).apply { id = View.generateViewId() }
 
-        // Creamos y configuramos el WebView
-        webView = WebView(this).apply {
-            val webSettings = settings
-            webSettings.javaScriptEnabled = true
-            webSettings.loadWithOverviewMode = true
-            webSettings.useWideViewPort = true
-            webSettings.domStorageEnabled = true
-            webSettings.setSupportZoom(true)
-            webSettings.builtInZoomControls = true
-            webSettings.displayZoomControls = false
-            webSettings.javaScriptCanOpenWindowsAutomatically = true
-            webSettings.setSupportMultipleWindows(true)
-            webSettings.databaseEnabled = true
-            webSettings.allowFileAccess = true
-            webSettings.allowContentAccess = true
-            webSettings.userAgentString =
-                "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
+        // Creamos y configuramos el WebView con márgenes seguros usando la función reutilizable
+        val (webViewInstancia, webViewLayoutParams) = createConfiguredWebView(this)
+        webView = webViewInstancia
+        webView.webChromeClient = object : WebChromeClient() {
+            override fun onCreateWindow(
+                view: WebView?,
+                isDialog: Boolean,
+                isUserGesture: Boolean,
+                resultMsg: Message?
+            ): Boolean {
+                val newWebView = WebView(view!!.context)
+                newWebView.settings.javaScriptEnabled = true
+                newWebView.settings.javaScriptCanOpenWindowsAutomatically = true
+                newWebView.settings.setSupportMultipleWindows(true)
+                newWebView.settings.domStorageEnabled = true
+                newWebView.settings.databaseEnabled = true
+                newWebView.settings.allowFileAccess = true
+                newWebView.settings.allowContentAccess = true
 
-            // Habilitar scrollbars dentro del área visible
-            isVerticalScrollBarEnabled = true
-            isHorizontalScrollBarEnabled = true
-            scrollBarStyle = WebView.SCROLLBARS_INSIDE_OVERLAY
+                val transport = resultMsg?.obj as WebView.WebViewTransport
+                transport.webView = newWebView
+                resultMsg.sendToTarget()
 
-            webChromeClient = object : WebChromeClient() {
-                override fun onCreateWindow(
-                    view: WebView?,
-                    isDialog: Boolean,
-                    isUserGesture: Boolean,
-                    resultMsg: Message?
-                ): Boolean {
-                    val newWebView = WebView(view!!.context)
-                    newWebView.settings.javaScriptEnabled = true
-                    newWebView.settings.javaScriptCanOpenWindowsAutomatically = true
-                    newWebView.settings.setSupportMultipleWindows(true)
-                    newWebView.settings.domStorageEnabled = true
-                    newWebView.settings.databaseEnabled = true
-                    newWebView.settings.allowFileAccess = true
-                    newWebView.settings.allowContentAccess = true
-
-                    val transport = resultMsg?.obj as WebView.WebViewTransport
-                    transport.webView = newWebView
-                    resultMsg.sendToTarget()
-
-                    return true
-                }
+                return true
             }
-
-            webViewClient = object : WebViewClient() {
-                override fun onPageFinished(view: WebView?, url: String?) {
-                    super.onPageFinished(view, url)
-                    // Decodifica la contraseña antes de insertarla en el formulario
-                    val passwordCodificada = AuthManager.getUserCredentials(this@PaginaSecundaria).password
-                    val password = java.net.URLDecoder.decode(passwordCodificada, "UTF-8")
-                    // Decodifica el usuario antes de insertarlo en el formulario
-                    val usuarioCodificado = AuthManager.getUserCredentials(this@PaginaSecundaria).usuario
-                    val usuario = java.net.URLDecoder.decode(usuarioCodificado, "UTF-8")
-                    view?.evaluateJavascript(
-                        """
-                        (function() {
-                            isMobile = () => true;
-                            document.getElementsByName('LoginForm[username]')[0].value = '$usuario';
-                            document.getElementsByName('LoginForm[password]')[0].value = '$password';
-                            document.querySelector('form').submit();
-                            
-                            setTimeout(function() {
-                                var panels = document.querySelectorAll('.panel, .panel-body, .panel-heading');
-                                panels.forEach(function(panel) {
-                                    panel.style.display = 'block';
-                                    panel.style.visibility = 'visible';
-                                    panel.style.opacity = '1';
-                                    panel.style.maxHeight = 'none';
-                                });
-                                document.body.style.overflow = 'auto';
-                                document.documentElement.style.overflow = 'auto';
-                            }, 3000);
-                        })();
-                        """.trimIndent(),
-                        null
-                    )
-                }
-            }
-
-            loadUrl(BuildURLmovil.getIndex(this@PaginaSecundaria))
         }
+        webView.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                // Decodifica la contraseña antes de insertarla en el formulario
+                val passwordCodificada = AuthManager.getUserCredentials(this@PaginaSecundaria).password
+                val password = java.net.URLDecoder.decode(passwordCodificada, "UTF-8")
+                // Decodifica el usuario antes de insertarlo en el formulario
+                val usuarioCodificado = AuthManager.getUserCredentials(this@PaginaSecundaria).usuario
+                val usuario = java.net.URLDecoder.decode(usuarioCodificado, "UTF-8")
+                view?.evaluateJavascript(
+                    """
+                    (function() {
+                        isMobile = () => true;
+                        document.getElementsByName('LoginForm[username]')[0].value = '$usuario';
+                        document.getElementsByName('LoginForm[password]')[0].value = '$password';
+                        document.querySelector('form').submit();
+                        
+                        setTimeout(function() {
+                            var panels = document.querySelectorAll('.panel, .panel-body, .panel-heading');
+                            panels.forEach(function(panel) {
+                                panel.style.display = 'block';
+                                panel.style.visibility = 'visible';
+                                panel.style.opacity = '1';
+                                panel.style.maxHeight = 'none';
+                            });
+                            document.body.style.overflow = 'auto';
+                            document.documentElement.style.overflow = 'auto';
+                        }, 3000);
+                    })();
+                    """.trimIndent(),
+                    null
+                )
+            }
+        }
+        webView.loadUrl(BuildURLmovil.getIndex(this@PaginaSecundaria))
 
         // ComposeView superpuesto
         val composeView = ComposeView(this).apply {
@@ -197,11 +212,6 @@ class PaginaSecundaria : ComponentActivity() {
                 )
             }
         }
-        // LayoutParams estándar para WebView: ocupa todo el contenedor
-        val webViewLayoutParams = FrameLayout.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT
-        )
 
         root.addView(
             webView,

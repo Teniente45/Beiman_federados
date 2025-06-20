@@ -12,6 +12,7 @@ public final class PaginaSecundaria extends androidx.activity.ComponentActivity 
     }
     
     @java.lang.Override()
+    @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.Q)
     @android.annotation.SuppressLint(value = {"SetJavaScriptEnabled"})
     protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {

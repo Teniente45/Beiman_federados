@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-72:/values-v25/values-v25.xml",
+            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-71:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/d4dd0c2fc41d49eb70711568ff28c9e4/transformed/appcompat-1.7.0/res/values-v25/values-v25.xml",
+                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/326d649f393568e8bf6eb9c8e9e067ad/transformed/appcompat-1.7.1/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

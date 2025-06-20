@@ -8,19 +8,14 @@
 
 package com.miapp.kairos24h
 
-import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.Uri
 import android.os.Bundle
-import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -45,14 +40,12 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -205,30 +198,6 @@ fun DisplayLogo(
     var passwordVisible by remember { mutableStateOf(false) }
     // Mensaje de error a mostrar si los datos de acceso son incorrectos
     val errorMessage by remember { mutableStateOf("") }
-    // Obtiene el contexto actual de la aplicación
-    val context = LocalContext.current
-    // Indica si el usuario ha concedido el permiso de ubicación
-    var isLocationChecked by remember { mutableStateOf(false) }
-    // Lleva la cuenta de las veces que el permiso de ubicación ha sido denegado
-    var locationPermissionDeniedCount by remember { mutableIntStateOf(0) }
-    // Lanza la solicitud de permiso de ubicación y maneja su resultado
-    val requestPermissionLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
-        isLocationChecked = isGranted
-        if (!isGranted) {
-            locationPermissionDeniedCount++
-            if (locationPermissionDeniedCount >= 3) {
-                Toast.makeText(context, "Debe habilitar los permisos de GPS manualmente en los ajustes.", Toast.LENGTH_LONG).show()
-                val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                    data = Uri.fromParts("package", context.packageName, null)
-                }
-                context.startActivity(intent)
-            } else {
-                Toast.makeText(context, "Debe aceptar los permisos de GPS para continuar.", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
 
     Column(
         modifier = Modifier

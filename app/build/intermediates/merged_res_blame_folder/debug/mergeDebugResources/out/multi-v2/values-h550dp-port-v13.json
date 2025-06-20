@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-72:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-71:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/515190a46fdad18dca927840b156515a/transformed/material-1.6.1/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "64",
-                        "endOffsets": "115"
+                        "endColumns": "76",
+                        "endOffsets": "127"
                     }
                 }
             ]

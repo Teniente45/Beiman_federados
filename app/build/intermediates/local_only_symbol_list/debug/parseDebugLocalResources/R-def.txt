@@ -18,9 +18,7 @@ drawable hacia_delante
 drawable ic_calendario
 drawable ic_cerrar32
 drawable icono_usuario
-drawable logo
 drawable logo_desarrolladora
-drawable logo_i3data
 drawable menu_opciones
 drawable mis_citas
 drawable mis_datos

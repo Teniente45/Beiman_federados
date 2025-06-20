@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-72:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-71:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/d4dd0c2fc41d49eb70711568ff28c9e4/transformed/appcompat-1.7.0/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/326d649f393568e8bf6eb9c8e9e067ad/transformed/appcompat-1.7.1/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

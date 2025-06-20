@@ -10,8 +10,10 @@ package com.miapp.kairos24h.movilAPK
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.webkit.WebView
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -81,6 +83,7 @@ fun SolapaWebView(
             lifecycleOwner.lifecycle.removeObserver(observer)
         }
     }
+
     // Cambiar que se accione por comportamiento de botón
     if (isVisibleState.value) {
         Column(

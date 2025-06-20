@@ -14,6 +14,7 @@ package com.miapp.kairos24h.movilAPK
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -27,6 +28,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.FrameLayout
 import androidx.activity.ComponentActivity
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -84,6 +86,7 @@ class PaginaSecundaria : ComponentActivity() {
     private val handler = Handler(Looper.getMainLooper())
     private val sessionTimeoutMillis = 2 * 60 * 60 * 1000L // 2 horas
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -194,19 +197,11 @@ class PaginaSecundaria : ComponentActivity() {
                 )
             }
         }
-
-        // Ajuste de LayoutParams para WebView: altura delimitada por barra superior (30dp) y barra inferior (56dp)
-        val displayMetrics = resources.displayMetrics
-        val topMarginPx = (30 * displayMetrics.density).toInt()
-        val bottomMarginPx = (56 * displayMetrics.density).toInt()
-
+        // LayoutParams estándar para WebView: ocupa todo el contenedor
         val webViewLayoutParams = FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
-        ).apply {
-            topMargin = topMarginPx
-            bottomMargin = bottomMarginPx
-        }
+        )
 
         root.addView(
             webView,
@@ -318,7 +313,7 @@ fun WebViewScreen(
                     tint = Color.Unspecified
                 )
                 Text(
-                    text = cUsuario,
+                    text = cUsuario.uppercase(),
                     color = Color(0xFF7599B6),
                     fontSize = 18.sp
                 )

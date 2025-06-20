@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-72:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.miapp.beiman_federados.app-mergeDebugResources-71:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/d4dd0c2fc41d49eb70711568ff28c9e4/transformed/appcompat-1.7.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/326d649f393568e8bf6eb9c8e9e067ad/transformed/appcompat-1.7.1/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,20 +14,22 @@
                     }
                 },
                 {
-                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/39039a7d87d7192e5e66291bbedbce45/transformed/material-1.11.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/juanlopezmarin/.gradle/caches/8.10.2/transforms/515190a46fdad18dca927840b156515a/transformed/material-1.6.1/res/values-large-v4/values-large-v4.xml",
                     "from": {
-                        "startLines": "2,3,4,5",
+                        "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "55,169,285,407",
-                        "endColumns": "113,115,121,133",
-                        "endOffsets": "164,280,402,536"
+                        "startOffsets": "55,177,311,752",
+                        "endLines": "2,3,9,15",
+                        "endColumns": "121,133,10,10",
+                        "endOffsets": "172,306,747,1190"
                     },
                     "to": {
-                        "startLines": "11,12,13,14",
+                        "startLines": "11,12,13,19",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "752,866,982,1104",
-                        "endColumns": "113,115,121,133",
-                        "endOffsets": "861,977,1099,1233"
+                        "startOffsets": "752,874,1008,1449",
+                        "endLines": "11,12,18,24",
+                        "endColumns": "121,133,10,10",
+                        "endOffsets": "869,1003,1444,1887"
                     }
                 }
             ]

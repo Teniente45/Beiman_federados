@@ -25,76 +25,6 @@ public final class UserCredentials {
     @org.jetbrains.annotations.NotNull()
     private final java.lang.String cTipEmp = null;
     
-    public UserCredentials(@org.jetbrains.annotations.NotNull()
-    java.lang.String usuario, @org.jetbrains.annotations.NotNull()
-    java.lang.String password, @org.jetbrains.annotations.Nullable()
-    java.lang.String xEmpleado, @org.jetbrains.annotations.NotNull()
-    java.lang.String lComGPS, @org.jetbrains.annotations.NotNull()
-    java.lang.String lComIP, @org.jetbrains.annotations.NotNull()
-    java.lang.String lBotonesFichajeMovil, @org.jetbrains.annotations.Nullable()
-    java.lang.String xEntidad, @org.jetbrains.annotations.NotNull()
-    java.lang.String sEmpleado, @org.jetbrains.annotations.NotNull()
-    java.lang.String tUrlCPP, @org.jetbrains.annotations.NotNull()
-    java.lang.String tLogo, @org.jetbrains.annotations.NotNull()
-    java.lang.String cTipEmp) {
-        super();
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getUsuario() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getPassword() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getXEmpleado() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getLComGPS() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getLComIP() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getLBotonesFichajeMovil() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getXEntidad() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getSEmpleado() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getTUrlCPP() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getTLogo() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCTipEmp() {
-        return null;
-    }
-    
     @org.jetbrains.annotations.NotNull()
     public final java.lang.String component1() {
         return null;
@@ -180,6 +110,76 @@ public final class UserCredentials {
     @java.lang.Override()
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
+        return null;
+    }
+    
+    public UserCredentials(@org.jetbrains.annotations.NotNull()
+    java.lang.String usuario, @org.jetbrains.annotations.NotNull()
+    java.lang.String password, @org.jetbrains.annotations.Nullable()
+    java.lang.String xEmpleado, @org.jetbrains.annotations.NotNull()
+    java.lang.String lComGPS, @org.jetbrains.annotations.NotNull()
+    java.lang.String lComIP, @org.jetbrains.annotations.NotNull()
+    java.lang.String lBotonesFichajeMovil, @org.jetbrains.annotations.Nullable()
+    java.lang.String xEntidad, @org.jetbrains.annotations.NotNull()
+    java.lang.String sEmpleado, @org.jetbrains.annotations.NotNull()
+    java.lang.String tUrlCPP, @org.jetbrains.annotations.NotNull()
+    java.lang.String tLogo, @org.jetbrains.annotations.NotNull()
+    java.lang.String cTipEmp) {
+        super();
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getUsuario() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getPassword() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getXEmpleado() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getLComGPS() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getLComIP() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getLBotonesFichajeMovil() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getXEntidad() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getSEmpleado() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getTUrlCPP() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getTLogo() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCTipEmp() {
         return null;
     }
 }

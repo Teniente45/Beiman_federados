@@ -4,6 +4,12 @@ package com.miapp.kairos24h.enlaces_internos;
 public final class EstilosBeiman {
     @org.jetbrains.annotations.NotNull()
     private static final androidx.compose.ui.text.TextStyle textoEstilo = null;
+    
+    /**
+     * =========================================================================
+     *     Estilos del botón que muestra SolapaWebView (fun NavegadorBeiman)
+     * ==========================================================================
+     */
     private static final float botonSolapaSize = 0.0F;
     private static final float iconoSolapaSize = 0.0F;
     private static final long colorFondoBotonSolapa = 0L;
@@ -27,6 +33,11 @@ public final class EstilosBeiman {
         return null;
     }
     
+    /**
+     * =====================================================================
+     *     Estilos de los inconos de PantallaFuncional
+     * =====================================================================
+     */
     @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u001a\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002R\u0019\u0010\u0003\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0005\u0010\u0006R\u0019\u0010\b\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\t\u0010\u0006R\u0019\u0010\n\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u000b\u0010\u0006R\u0019\u0010\f\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\r\u0010\u0006R\u0019\u0010\u000e\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u000f\u0010\u0006R\u0019\u0010\u0010\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0011\u0010\u0006R\u0019\u0010\u0012\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0013\u0010\u0006R\u0019\u0010\u0014\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0015\u0010\u0006R\u0019\u0010\u0016\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0017\u0010\u0006R\u0019\u0010\u0018\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0019\u0010\u0006R\u0019\u0010\u001a\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u001b\u0010\u0006R\u0019\u0010\u001c\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u001d\u0010\u0006R\u0019\u0010\u001e\u001a\u00020\u001f\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\"\u001a\u0004\b \u0010!R\u0019\u0010#\u001a\u00020\u0004\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b$\u0010\u0006\u0082\u0002\u000b\n\u0005\b\u00a1\u001e0\u0001\n\u0002\b!\u00a8\u0006%"}, d2 = {"Lcom/miapp/kairos24h/enlaces_internos/EstilosBeiman$Dimensiones;", "", "()V", "columnSpacing", "Landroidx/compose/ui/unit/Dp;", "getColumnSpacing-D9Ej5fM", "()F", "F", "desarrolladoraPaddingBottom", "getDesarrolladoraPaddingBottom-D9Ej5fM", "desarrolladoraPaddingTop", "getDesarrolladoraPaddingTop-D9Ej5fM", "iconSize", "getIconSize-D9Ej5fM", "iconTextSpacing", "getIconTextSpacing-D9Ej5fM", "logoPaddingBottom", "getLogoPaddingBottom-D9Ej5fM", "logoPaddingTop", "getLogoPaddingTop-D9Ej5fM", "navegadorPaddingBottom", "getNavegadorPaddingBottom-D9Ej5fM", "navegadorPaddingTop", "getNavegadorPaddingTop-D9Ej5fM", "paddingHorizontal", "getPaddingHorizontal-D9Ej5fM", "paddingVertical", "getPaddingVertical-D9Ej5fM", "rowSpacing", "getRowSpacing-D9Ej5fM", "textFontSize", "Landroidx/compose/ui/unit/TextUnit;", "getTextFontSize-XSAIIZE", "()J", "J", "textWidth", "getTextWidth-D9Ej5fM", "app_debug"})
     public static final class Dimensiones {
         private static final float iconSize = 0.0F;
